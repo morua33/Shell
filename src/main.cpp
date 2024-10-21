@@ -11,7 +11,7 @@ int main() {
   std::string input;
   std::getline(std::cin, input);
 
-  std::cout << input << ": command note found";
+  std::cout << input << ": command not found";
 
   return 0;
 }
