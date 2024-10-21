@@ -12,4 +12,5 @@ int main() {
   std::getline(std::cin, input);
 
   std::cout << input <<": command note found";
+  return 0;
 }
