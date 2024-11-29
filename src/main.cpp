@@ -15,7 +15,7 @@ int main() {
     if (input == "exit 0"){
       return 0;
     }
-    else if (input.substr(0, 4) == "echo "){
+    else if (input.substr(0, 5) == "echo "){
       std::cout << input.substr(6);
     
     }
