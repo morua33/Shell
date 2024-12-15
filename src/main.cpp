@@ -33,7 +33,7 @@ int main() {
     }
     
     else{
-      std::cout << input << ": command not found\n";
+      std::cout << input << ": not found\n";
     }
 
   }
