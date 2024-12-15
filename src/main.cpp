@@ -20,7 +20,7 @@ int main() {
     
     }
     else if (input.substr(0, 5) == "type "){
-      std::string cmd = input.substr(6);
+      std::string cmd = input.substr(5);
       if (cmd == "echo" || cmd == "type" || cmd == "exit"){
         std::cout << cmd << " is a shell builtin" << std::endl;
       }
