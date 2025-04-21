@@ -41,15 +41,13 @@ int main() {
         std::cout << cmd << " is a shell builtin" << std::endl;
       }
       else{
+        std::string path = get_path(cmd);
+        if(path.empty()){
+          std::cout << cmd << ": not found\n";
+        }
         
         else{
-          std::string path = get_path(cmd);
-          if(path.empty()){
-            std::cout << cmd << ": not found\n";
-          }
-          else{
-            std::cout << input.substr(5) << " is " << path << std::endl;
-          }
+          std::cout << input.substr(5) << " is " << path << std::endl;
         }
       }
     
