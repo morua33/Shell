@@ -59,8 +59,10 @@ int main() {
         std::cout << cmd << ": not found\n";
       }
       else{
+        const char *input_ptr = input.c_str();
 
-        system(input);
+
+        system(input_ptr);
         
       }
       
