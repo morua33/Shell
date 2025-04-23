@@ -38,7 +38,7 @@ int main() {
     else if (input.substr(0, 5) == "type "){
       // std::string cmd = input.substr(5);
       if (input.substr(5) == "echo" || input.substr(5) == "type" || input.substr(5) == "exit"){
-        std::cout << cmd << " is a shell builtin" << std::endl;
+        std::cout << input.substr(5) << " is a shell builtin" << std::endl;
       }
       else{
         std::string path = get_path(input.substr(5));
