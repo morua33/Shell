@@ -37,7 +37,7 @@ int main() {
     }
     else if (input.substr(0, 5) == "type "){
       // std::string cmd = input.substr(5);
-      if (input.substr(5) == "echo" || input.substr(5) == "type" || input.substr(5) == "exit" || input.substr(4) == "pwd"){
+      if (input.substr(5) == "echo" || input.substr(5) == "type" || input.substr(5) == "exit" || input.substr(5) == "pwd"){
         std::cout << input.substr(5) << " is a shell builtin" << std::endl;
       }
       else{
@@ -51,7 +51,7 @@ int main() {
         }
       }
     }
-    else if(input.substr(0,3) == "pwd"){
+    else if(input.substr(0,4) == "pwd"){
       std::cout << std::filesystem::current_path() << std::endl;
 
     }
