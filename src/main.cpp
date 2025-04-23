@@ -56,7 +56,7 @@ int main() {
       std::string path = get_path(input.substr(0,end));
 
       if(path.empty()){
-        std::cout << path << ": not found\n";
+        std::cout << input << ": not found\n";
       }
       else{
         const char *input_ptr = input.c_str();
