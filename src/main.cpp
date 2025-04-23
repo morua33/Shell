@@ -51,6 +51,10 @@ int main() {
         }
       }
     }
+    else if(input.substr(0,3) == "pwd"){
+      std::cout << std::filesystem:current_path() << std::endl;
+
+    }
     else{
       int end = input.find(" ");
       std::string path = get_path(input.substr(0,end));
