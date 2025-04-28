@@ -60,7 +60,7 @@ int main() {
         std::filesystem::current_path(input.substr(3));
       }
       else{
-        std::cout << "cd: " << input.substr(4) << ": No such file or directory" << std::endl;
+        std::cout << "cd: " << input.substr(3) << ": No such file or directory" << std::endl;
       }
       
     }
