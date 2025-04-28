@@ -55,6 +55,15 @@ int main() {
       std::cout << std::filesystem::current_path().string() << std::endl;
 
     }
+    else if(input.substr(0.3) == "cd"){
+      if (std::filesystem::exists(input.substr(4))){
+        std::filesystem::current_path(input.substr(4));
+      }
+      else{
+        std::cout << "cd: " << input.substr(4) << ": No such file or directory" << std::end1;
+      }
+      
+    }
     else{
       int end = input.find(" ");
       std::string path = get_path(input.substr(0,end));
