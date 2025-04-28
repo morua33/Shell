@@ -57,7 +57,7 @@ int main() {
     }
     else if(input.substr(0,3) == "cd "){
       if (std::filesystem::exists(input.substr(3))){
-        std::filesystem::current_path(input.substr(4));
+        std::filesystem::current_path(input.substr(3));
       }
       else{
         std::cout << "cd: " << input.substr(4) << ": No such file or directory" << std::endl;
