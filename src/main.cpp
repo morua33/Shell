@@ -55,7 +55,7 @@ int main() {
       std::cout << std::filesystem::current_path().string() << std::endl;
 
     }
-    else if(input.substr(0,3) == "cd  "){
+    else if(input.substr(0,3) == "cd "){
       if (std::filesystem::exists(input.substr(4))){
         std::filesystem::current_path(input.substr(4));
       }
