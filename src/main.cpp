@@ -43,7 +43,7 @@ int main() {
       else{
         std::string path = get_path(input.substr(5));
         if(path.empty()){
-          std::cout << input.substr(5) << ": not found\n";
+          std::cout << input.substr(5) << ": not found\n" << std::endl;
         }
         
         else{
