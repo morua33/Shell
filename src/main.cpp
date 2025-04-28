@@ -43,7 +43,7 @@ int main() {
       else{
         std::string path = get_path(input.substr(5));
         if(path.empty()){
-          std::cout << input.substr(5) << ": not found\n" << std::endl;
+          std::cout << input.substr(5) << ": not found" << std::endl;
         }
         
         else{
@@ -69,7 +69,7 @@ int main() {
       std::string path = get_path(input.substr(0,end));
 
       if(path.empty()){
-        std::cout << input << ": not found\n" << std::endl;
+        std::cout << input << ": not found" << std::endl;
       }
       else{
         const char *input_ptr = input.c_str();
