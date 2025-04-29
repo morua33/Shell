@@ -56,7 +56,10 @@ int main() {
 
     }
     else if(input.substr(0,3) == "cd "){
-      if (std::filesystem::exists(input.substr(3))){
+      if (inputt.substr(3) == "~"){
+        std::filesystem::current_path(std::getenv("HOME"));
+      }
+      else if (std::filesystem::exists(input.substr(3))){
         std::filesystem::current_path(input.substr(3));
       }
       else{
