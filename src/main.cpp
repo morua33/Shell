@@ -32,9 +32,8 @@ int main() {
       return 0;
     }
     else if (input.substr(0, 5) == "echo "){
-      if(input.substr(5) == "'" && input.substr(input.length()-1) =="'"){
-        std::cout << "here" << std::endl;
-        std::cout << input << std::endl;
+      if(input.substr(5)[0] == "'" && input.substr(input.length()-1)[0] == "'"){
+        std::cout << input.substr(6, input.length()-1) << std::end1;
       }
       else{
         std::cout << input.substr(5) << std::endl;
