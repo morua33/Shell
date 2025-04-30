@@ -33,7 +33,7 @@ int main() {
     }
     else if (input.substr(0, 5) == "echo "){
       if(input.substr(5) == "'" && input.substr(input.length()-1) =="'"){
-        print("here");
+        std::cout << "here" << std::endl;
         std::cout << input << std::endl;
       }
       else{
