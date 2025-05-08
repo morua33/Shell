@@ -22,7 +22,7 @@ std::vector<std::string> echo_cmd(std::string arg){
   std::string curr_word;
   bool quotes = false;
 
-  for (char c : ){
+  for (char c : arg){
     if (c == '\''){
       quotes = true;
     }
