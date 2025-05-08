@@ -44,7 +44,7 @@ std::vector<std::string> echo_cmd(const std::string& arg){
     
     
   }
-  std::cout << words[1] << std::endl;
+  std::cout << words << std::endl;
   return words;
 
 }
