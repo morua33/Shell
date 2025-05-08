@@ -28,14 +28,14 @@ std::vector<std::string> echo_cmd(std::string arg){
     }
     else if (c == ' ' && !quotes){
       if(!curr_word.empty()){
-        std::cout << "here2" std::endl;
+        std::cout << "here2" << std::endl;
         words.push_back(curr_word);
         curr_word.clear();
       }
 
     }
     else{
-      std::cout << "here1" std::endl;
+      std::cout << "here1" << std::endl;
       curr_word += c;
 
     }
