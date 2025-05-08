@@ -22,7 +22,7 @@ std::vector<std::string> echo_cmd(std::string arg){
   std::string curr_word;
   bool quotes = false;
 
-  for (char c : arg){
+  for (char c : ){
     if (c == '\''){
       quotes = true;
     }
@@ -61,9 +61,9 @@ int main() {
       return 0;
     }
     else if (input.substr(0, 5) == "echo "){
-      std::string arg = input(5)
+  
 
-      std::vector<std::string> arg_ = echo_cmd(arg);
+      std::vector<std::string> arg = echo_cmd(input.substr(5));
       // std::cout << arg << std::endl;
 
     }
