@@ -17,14 +17,14 @@ std::string get_path(std::string command){
   }
   return "";
 }
-std::vector<std::string> echo_cmd( const std::string& arg){
+std::vector<std::string> echo_cmd(const std::string& arg){
   std::vector<std::string> words;
   std::string curr_word;
   bool quotes = false;
 
   for (char c : arg){
-    std::cout << c << std::endl;
-    std::cout << "here3" << std::endl;
+    // std::cout << c << std::endl;
+    // std::cout << "here3" << std::endl;
     if (c == '\''){
       quotes = true;
     }
