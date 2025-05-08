@@ -40,10 +40,13 @@ std::vector<std::string> echo_cmd(const std::string& arg){
       std::cout << "here1" << std::endl;
       curr_word += c;
 
-    }
-    
-    
+    }   
   }
+  
+  if (!curr_word.empty()) {
+    words.push_back(curr_word);
+  }  
+
   std::cout << words[1] << std::endl;
   return words;
 
