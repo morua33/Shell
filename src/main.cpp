@@ -64,7 +64,7 @@ int main() {
   
 
       std::vector<std::string> arg = echo_cmd(input.substr(5));
-      // std::cout << arg << std::endl;
+      std::cout << arg[0] << std::endl;
 
     }
     else if (input.substr(0, 5) == "type "){
