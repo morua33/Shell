@@ -17,7 +17,7 @@ std::string get_path(std::string command){
   }
   return "";
 }
-std::string echo_cmd(const std::string& arg){
+std::vector<std::string> echo_cmd(const std::string& arg){
   std::vector<std::string> words;
   std::string curr_word;
   bool quotes = false;
@@ -30,7 +30,7 @@ std::string echo_cmd(const std::string& arg){
     }
     else if (c == ' ' && !quotes){
       if(!curr_word.empty()){
-        // std::cout << "here2" << std::endl;
+        std::cout << "here2" << std::endl;
         words.push_back(curr_word);
         curr_word.clear();
       }
@@ -47,7 +47,7 @@ std::string echo_cmd(const std::string& arg){
     words.push_back(curr_word);
   }  
 
-  // std::cout << words[0] << std::endl;
+  std::cout << words[0] << std::endl;
   return words;
 
 }
@@ -70,7 +70,11 @@ int main() {
     else if (input.substr(0, 5) == "echo "){
   
 
-
+      std::vector<std::string> arg = echo_cmd(input.substr(5));
+      for (word : arg){
+        std::cout << word;
+      }
+      std::cout << std::endl;
 
     }
     else if (input.substr(0, 5) == "type "){
