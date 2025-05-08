@@ -18,7 +18,7 @@ std::string get_path(std::string command){
   return "";
 }
 std::string echo_cmd(const std::string& arg){
-  std::vector<std::string> words;
+  std::string words;
   std::string curr_word;
   bool quotes = false;
 
