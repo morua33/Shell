@@ -26,7 +26,7 @@ std::vector<std::string> echo_cmd(const std::string& arg){
     // std::cout << c << std::endl;
     // std::cout << "here3" << std::endl;
     if (c == '\''){
-      quotes = true;
+      quotes = !quotes;
     }
     else if (c == ' ' && !quotes){
       if(!curr_word.empty()){
