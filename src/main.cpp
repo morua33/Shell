@@ -71,7 +71,7 @@ int main() {
   
 
       std::vector<std::string> arg = echo_cmd(input.substr(5));
-      for (word : arg){
+      for (std::string word : arg){
         std::cout << word;
       }
       std::cout << std::endl;
