@@ -23,7 +23,7 @@ std::vector<std::string> echo_cmd(std::string arg){
   bool quotes = false;
 
   for (char c : arg){
-    std::cout << arg << " " << c << std::endl;
+    std::cout << c << std::endl;
     std::cout << "here3" << std::endl;
     if (c == '\''){
       quotes = true;
