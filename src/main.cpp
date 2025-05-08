@@ -46,8 +46,6 @@ std::vector<std::string> echo_cmd(const std::string& arg){
   if (!curr_word.empty()) {
     words.push_back(curr_word);
   }  
-
-  std::cout << words[0] << std::endl;
   return words;
 
 }
