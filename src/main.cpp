@@ -17,7 +17,7 @@ std::string get_path(std::string command){
   }
   return "";
 }
-std::vector<std::string> echo_cmd(const std::string& arg){
+std::string echo_cmd(const std::string& arg){
   std::vector<std::string> words;
   std::string curr_word;
   bool quotes = false;
@@ -70,7 +70,8 @@ int main() {
     else if (input.substr(0, 5) == "echo "){
   
 
-      std::vector<std::string> arg = echo_cmd(input.substr(5));
+      // std::vector<std::string> arg = echo_cmd(input.substr(5));
+      std::string arg = echo_cmd(input.substr(5));
       std::cout << arg[0] << std::endl;
 
     }
