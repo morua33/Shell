@@ -37,7 +37,7 @@ std::vector<std::string> echo_cmd(std::string arg){
       curr_word += c;
 
     }
-    std::cout << "what" << std::endl;
+    std::cout << words[0] << std::endl;
 
     return words;
   }
