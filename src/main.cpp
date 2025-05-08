@@ -30,7 +30,7 @@ std::vector<std::string> echo_cmd(const std::string& arg){
     }
     else if (c == ' ' && !quotes){
       if(!curr_word.empty()){
-        // std::cout << "here2" << std::endl;
+        std::cout << "here2" << std::endl;
         words.push_back(curr_word);
         curr_word.clear();
       }
