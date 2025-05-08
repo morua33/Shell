@@ -33,7 +33,7 @@ std::vector<std::string> echo_cmd(std::string& arg){
 
     }
     else{
-      cur_word += c;
+      curr_word += c;
 
     }
 
@@ -46,8 +46,8 @@ std::vector<std::string> echo_cmd(std::string& arg){
 
 int main() {
   // Flush after every std::cout / std:cerr
-  // std::cout << std::unitbuf;
-  // std::cerr << std::unitbuf;
+  std::cout << std::unitbuf;
+  std::cerr << std::unitbuf;
 
   
   while (1)
