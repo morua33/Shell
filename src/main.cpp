@@ -61,7 +61,8 @@ int main() {
       return 0;
     }
     else if (input.substr(0, 5) == "echo "){
-      std::vector<std::string> arg = echo_cmd(input(5));
+
+      std::vector<std::string> arg_ = echo_cmd(input(5));
       // std::cout << arg << std::endl;
 
     }
