@@ -23,21 +23,21 @@ std::vector<std::string> echo_cmd(std::string arg){
   bool quotes = false;
 
   for (char c : arg){
-    // std::cout << c << std::endl;
-    // std::cout << "here3" << std::endl;
+    std::cout << c << std::endl;
+    std::cout << "here3" << std::endl;
     if (c == '\''){
       quotes = true;
     }
     else if (c == ' ' && !quotes){
       if(!curr_word.empty()){
-        // std::cout << "here2" << std::endl;
+        std::cout << "here2" << std::endl;
         words.push_back(curr_word);
         curr_word.clear();
       }
 
     }
     else{
-      // std::cout << "here1" << std::endl;
+      std::cout << "here1" << std::endl;
       curr_word += c;
 
     }
