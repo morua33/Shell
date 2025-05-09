@@ -71,6 +71,7 @@ int main() {
       std::vector<std::string> arg = echo_cmd(input.substr(5));
       for (int i; i < arg.size(); i++){
         std::cout << arg[i];
+        std::cout << "here1" << std::endl;
         if(i < arg.size()-1){
           std::cout << " ";
         }
