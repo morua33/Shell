@@ -17,7 +17,7 @@ std::string get_path(std::string command){
   }
   return "";
 }
-std::vector<std::string> echo_cmd(const std::string& arg){
+std::vector<std::string> split(const std::string& arg){
   std::vector<std::string> words;
   std::string curr_word;
   bool quotes = false;
@@ -64,40 +64,43 @@ int main() {
     if (input == "exit 0"){
       return 0;
     }
-    else if (input.substr(0, 5) == "echo "){
-  
 
-      std::vector<std::string> arg = echo_cmd(input.substr(5));
-      for (int i =0; i < arg.size(); i++){
-        std::cout << arg[i];
+    std::vector<std::string> line = split(input);
+    std::string cmd = line[0];
 
-        if(i < arg.size()-1){
+
+
+    if (cmd == "echo"){
+      for (int i =1; i < line.size(); i++){
+        std::cout << line[i];
+
+        if(i < line.size()-1){
           std::cout << " ";
         }
       }
       std::cout << std::endl;
 
     }
-    else if (input.substr(0, 5) == "type "){
+    else if (cmd == "type"){
       // std::string cmd = input.substr(5);
-      if (input.substr(5) == "echo" || input.substr(5) == "type" || input.substr(5) == "exit" || input.substr(5) == "pwd"){
-        std::cout << input.substr(5) << " is a shell builtin" << std::endl;
+      if (cmd == "echo" || cmd == "type" || cmd == "exit" || cmd == "pwd"){
+        std::cout << cmd << " is a shell builtin" << std::endl;
       }
       else{
-        std::string path = get_path(input.substr(5));
+        std::string path = get_path(cmd);
         if(path.empty()){
-          std::cout << input.substr(5) << ": not found" << std::endl;
+          std::cout << cmd << ": not found" << std::endl;
         }
         
         else{
-          std::cout << input.substr(5) << " is " << path << std::endl;
+          std::cout << cmd << " is " << path << std::endl;
         }
       }
     }
-    else if(input == "pwd"){
+    else if(cmd == "pwd"){
       std::cout << std::filesystem::current_path().string() << std::endl;
     }
-    else if(input.substr(0,3) == "cd "){
+    else if(cmd == "cd"){
       if (input.substr(3) == "~"){
         std::filesystem::current_path(std::getenv("HOME"));
       }
@@ -105,12 +108,12 @@ int main() {
         std::filesystem::current_path(input.substr(3));
       }
       else{
-        std::cout << "cd: " << input.substr(3) << ": No such file or directory" << std::endl;
+        std::cout << "cd: " << cmd << ": No such file or directory" << std::endl;
       }  
     }
     else{
-      int end = input.find(" ");
-      std::string path = get_path(input.substr(0,end));
+      
+      std::string path = get_path(cmd);
       if(path.empty()){
         std::cout << input << ": not found" << std::endl;
       }
