@@ -69,8 +69,11 @@ int main() {
   
 
       std::vector<std::string> arg = echo_cmd(input.substr(5));
-      for (std::string word : arg){
-        std::cout << word;
+      for (int i; i < arg.size(); i++){
+        std::cout << arg[i];
+        if(i < arg.size()-1){
+          std::cout << " ";
+        }
       }
       std::cout << std::endl;
 
