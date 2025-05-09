@@ -30,7 +30,6 @@ std::vector<std::string> echo_cmd(const std::string& arg){
     }
     else if (c == ' ' && !quotes){
       if(!curr_word.empty()){
-        std::cout << curr_word << std::endl;
         words.push_back(curr_word);
         curr_word.clear();
       }
@@ -71,7 +70,7 @@ int main() {
       std::vector<std::string> arg = echo_cmd(input.substr(5));
       for (int i =0; i < arg.size(); i++){
         std::cout << arg[i];
-        
+
         if(i < arg.size()-1){
           std::cout << " ";
         }
